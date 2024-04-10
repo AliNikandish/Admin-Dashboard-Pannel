@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLock, FaUser } from "react-icons/fa";
 import { IoLogOutOutline } from "react-icons/io5";
 

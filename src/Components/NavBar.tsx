@@ -1,4 +1,3 @@
-import React from 'react'
 import { IoMail } from "react-icons/io5";
 import { FaBell } from "react-icons/fa6";
 import { PiMagnifyingGlassDuotone } from 'react-icons/pi';

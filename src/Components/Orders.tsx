@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FaTrash } from "react-icons/fa6";
 import { IoNewspaperOutline } from "react-icons/io5";
 
