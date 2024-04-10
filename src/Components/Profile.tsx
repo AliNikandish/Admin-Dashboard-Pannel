@@ -11,7 +11,7 @@ const Profile = () => {
         >
           <img
             className="rounded-full w-28 h-28"
-            src="/src/assets/img/profile.webp"
+            src="profile.webp"
             alt=""
           />
           <p className="mt-2">نازی جمالی</p>
@@ -40,7 +40,7 @@ const Profile = () => {
         >
           <img
             className="rounded-full w-28 h-28"
-            src="/src/assets/img/profile.webp"
+            src="profile.webp"
             alt=""
           />
           <p className="mt-2">نازی جمالی</p>

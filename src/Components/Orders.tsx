@@ -1,6 +1,7 @@
 import  { useState } from "react";
 import { FaTrash } from "react-icons/fa6";
 import { IoNewspaperOutline } from "react-icons/io5";
+import { favoritesData } from "./Favorites";
 
 const ordersData = [
   {
@@ -284,15 +285,17 @@ const Orders = () => {
           <p>ساعت:14:30</p>
         </div>
         <div className="border-2 mt-3">
-          <div className="flex gap-x-2 my-2 px-2">
+
+          {favoritesData.map(fav=>{
+            return <div className="flex gap-x-2 my-2 px-2">
             <img
               className="w-16 h-16 rounded"
-              src="https://ghazapaz.com/wp-content/uploads/2020/09/%D8%B7%D8%B1%D8%B2-%D8%AA%D9%87%DB%8C%D9%87-%D9%BE%D8%A7%D8%B3%D8%AA%D8%A7-%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA-500x500.jpg"
+              src={fav.img}
               alt=""
             />
             <div className="flex justify-between w-full">
               <div>
-                <p className="text-sm">پاستا سبزیجات</p>
+                <p className="text-sm">{fav.title}</p>
                 <div className="rounded bg-[#cdded4] text-green-700 p-px w-12 flex gap-x-2 my-2">
                   <span className="">+</span>
                   <span className="">2</span>
@@ -304,75 +307,17 @@ const Orders = () => {
                   <FaTrash />
                 </div>
                 <div className="mt-2 flex gap-x-2 text-sm items-center">
-                  <del className="text-gray-500">175/000</del>
+                  <del className="text-gray-500">{Number(fav.price).toLocaleString()}</del>
                   <span className="bg-red-100 text-red-700 py-px px-1 rounded">
                     20%
                   </span>
                 </div>
-                <span className="text-sm">140/000 تومان</span>
+                <span className="text-sm">{(Number(fav.price)*0.8).toLocaleString()} تومان</span>
               </div>
             </div>
           </div>
-
-          <div className="flex gap-x-2 my-2 px-2">
-            <img
-              className="w-16 h-16 rounded"
-              src="https://ghazapaz.com/wp-content/uploads/2020/09/%D8%B7%D8%B1%D8%B2-%D8%AA%D9%87%DB%8C%D9%87-%D9%BE%D8%A7%D8%B3%D8%AA%D8%A7-%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA-500x500.jpg"
-              alt=""
-            />
-            <div className="flex justify-between w-full">
-              <div>
-                <p className="text-sm">پاستا سبزیجات</p>
-                <div className="rounded bg-[#cdded4] text-green-700 p-px w-12 flex gap-x-2 my-2">
-                  <span className="">+</span>
-                  <span className="">2</span>
-                  <span className="">-</span>
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-end text-gray-500">
-                  <FaTrash />
-                </div>
-                <div className="mt-2 flex gap-x-2 text-sm">
-                  <del>175/000</del>
-                  <span className="bg-red-100 text-red-700 py-px px-1 rounded">
-                    20%
-                  </span>
-                </div>
-                <span className="text-sm">140/000 تومان</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex gap-x-2 my-2 px-2">
-            <img
-              className="w-16 h-16 rounded"
-              src="https://ghazapaz.com/wp-content/uploads/2020/09/%D8%B7%D8%B1%D8%B2-%D8%AA%D9%87%DB%8C%D9%87-%D9%BE%D8%A7%D8%B3%D8%AA%D8%A7-%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA-500x500.jpg"
-              alt=""
-            />
-            <div className="flex justify-between w-full">
-              <div>
-                <p className="text-sm">پاستا سبزیجات</p>
-                <div className="rounded bg-[#cdded4] text-green-700 p-px w-12 flex gap-x-2 my-2">
-                  <span className="">+</span>
-                  <span className="">2</span>
-                  <span className="">-</span>
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-end text-gray-500">
-                  <FaTrash />
-                </div>
-                <div className="mt-2 flex gap-x-2 text-sm">
-                  <del>175/000</del>
-                  <span className="bg-red-100 text-red-700 py-px px-1 rounded">
-                    20%
-                  </span>
-                </div>
-                <span className="text-sm">140/000 تومان</span>
-              </div>
-            </div>
-          </div>
+          })}
+         
         </div>
         <div className="text-sm text-gray-500 mt-3 px-2">
           <div className="flex justify-between mb-2">

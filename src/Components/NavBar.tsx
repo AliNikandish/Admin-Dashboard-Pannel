@@ -8,7 +8,7 @@ const NavBar = () => {
     <div className=' flex justify-between bg-[#dae5dd] px-8 py-2'>
         <div className='flex gap-x-3'>
             <div>
-                <img className='w-12 h-12 rounded-full' src="/src/assets/img/profile.webp" alt="" />
+                <img className='w-12 h-12 rounded-full' src="profile.webp" alt="" />
             </div>
             <div>
                 <div className="flex gap-x-2 items-center">

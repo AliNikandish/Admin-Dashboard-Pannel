@@ -7,11 +7,11 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoWalletSharp } from "react-icons/io5";
 import StatsCard from "./StatsCard";
+import  { favoritesData } from "./Favorites";
 
 const Home = () => {
   return (
     <>
-
       <div className="max-xl:flex max-xl:justify-center ">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:flex justify-between gap-y-5">
           <StatsCard
@@ -102,60 +102,24 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex flex-col xl:flex-row justify-between mt-5 gap-2">
-              <div className="flex gap-x-3 items-center">
+            <div className="mt-5 grid grid-cols-1 xl:grid-cols-2 gap-2 xl:gap-y-5">
+              {favoritesData.map(favorite=>{
+                return <div className="flex gap-x-3 items-center">
                 <img
                   className="w-16 h-16 rounded-md"
-                  src="https://kermany.com/wp-content/uploads/2021/05/1-3.jpg"
+                  src={favorite.img}
                   alt=""
                 />
                 <div>
-                  <p>میرزا قاسمی</p>
-                  <p className="mt-1 text-xs text-gray-400">تعداد سفارش:21</p>
+                  <p>{favorite.title}</p>
+                  <p className="mt-1 text-xs text-gray-400">تعداد سفارش:{favorite.ordersCount}</p>
                 </div>
               </div>
-
-              <div className="flex gap-x-3 items-center">
-                <img
-                  className="w-16 h-16 rounded-md"
-                  src="https://kermany.com/wp-content/uploads/2021/05/1-3.jpg"
-                  alt=""
-                />
-                <div>
-                  <p>میرزا قاسمی</p>
-                  <p className="mt-1 text-xs text-gray-400">تعداد سفارش:21</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col xl:flex-row justify-between mt-5 gap-2">
-              <div className="flex gap-x-3 items-center">
-                <img
-                  className="w-16 h-16 rounded-md"
-                  src="https://kermany.com/wp-content/uploads/2021/05/1-3.jpg"
-                  alt=""
-                />
-                <div>
-                  <p>میرزا قاسمی</p>
-                  <p className="mt-1 text-xs text-gray-400">تعداد سفارش:21</p>
-                </div>
-              </div>
-
-              <div className="flex gap-x-3 items-center">
-                <img
-                  className="w-16 h-16 rounded-md"
-                  src="https://kermany.com/wp-content/uploads/2021/05/1-3.jpg"
-                  alt=""
-                />
-                <div>
-                  <p>میرزا قاسمی</p>
-                  <p className="mt-1 text-xs text-gray-400">تعداد سفارش:21</p>
-                </div>
-              </div>
+              })}
             </div>
           </div>
 
-          <div className="w-80 xl:w-[550px] h-[360px] xl:h-[240px] bg-white py-5 px-6 xl:px-14 rounded border-2">
+          <div className="w-80 xl:w-[550px] h-[360px] xl:h-[240px] bg-white py-5  px-6 xl:px-14 rounded border-2">
             <div className="flex justify-between">
               <p className="text-xs xl:text-base">وضعیت موجودی ها</p>
               <div className="text-xs xl:text-base flex items-center gap-x-1 text-orange-500">
@@ -164,56 +128,20 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex flex-col xl:flex-row justify-between mt-5 gap-2">
-              <div className="flex gap-x-3 items-center">
+            <div className="mt-5 grid grid-cols-1 xl:grid-cols-2 gap-2 xl:gap-y-5">
+              {favoritesData.map(favorite=>{
+                return <div className="flex gap-x-3 items-center">
                 <img
                   className="w-16 h-16 rounded-md"
-                  src="https://kermany.com/wp-content/uploads/2021/05/1-3.jpg"
+                  src={favorite.img}
                   alt=""
                 />
                 <div>
-                  <p>میرزا قاسمی</p>
-                  <p className="mt-1 text-xs text-gray-400"> موجودی:21</p>
+                  <p>{favorite.title}</p>
+                  <p className="mt-1 text-xs text-gray-400">تعداد موجودی:{favorite.ordersCount+10}</p>
                 </div>
               </div>
-
-              <div className="flex gap-x-3 items-center">
-                <img
-                  className="w-16 h-16 rounded-md"
-                  src="https://kermany.com/wp-content/uploads/2021/05/1-3.jpg"
-                  alt=""
-                />
-                <div>
-                  <p>میرزا قاسمی</p>
-                  <p className="mt-1 text-xs text-gray-400">تعداد موجودی:21</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col xl:flex-row justify-between mt-5 gap-2">
-              <div className="flex gap-x-3 items-center">
-                <img
-                  className="w-16 h-16 rounded-md"
-                  src="https://kermany.com/wp-content/uploads/2021/05/1-3.jpg"
-                  alt=""
-                />
-                <div>
-                  <p>میرزا قاسمی</p>
-                  <p className="mt-1 text-xs text-gray-400"> موجودی:21</p>
-                </div>
-              </div>
-
-              <div className="flex gap-x-3 items-center">
-                <img
-                  className="w-16 h-16 rounded-md"
-                  src="https://kermany.com/wp-content/uploads/2021/05/1-3.jpg"
-                  alt=""
-                />
-                <div>
-                  <p>میرزا قاسمی</p>
-                  <p className="mt-1 text-xs text-gray-400">تعداد موجودی:21</p>
-                </div>
-              </div>
+              })}
             </div>
           </div>
         </div>

@@ -2,33 +2,41 @@ import  { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart, FaStar, FaTrash } from "react-icons/fa6";
 
-const favoritesData = [
+export const favoritesData = [
   {
     title: "دلمه برگ مو",
     ordersCount: 36,
-    price: "178,000",
-    img: "/src/assets/img/Dolmeh.webp",
+    price: "178000",
+    img:'Dolmeh.webp',
+    // img: "/src/assets/img/Dolmeh.webp",
+    // img:"https://imgurl.ir/viewer.php?file=w52286_Dolmeh.webp",
     type: "mainFood",
   },
   {
     title: "سوپ جو پرک",
     ordersCount: 25,
-    price: "200,000",
-    img: "/src/assets/img/soupJo.jpg",
+    price: "200000",
+    img: "soupJo.jpg",
+    // img: "/src/assets/img/soupJo.jpg",
+    // img:"https://imgurl.ir/uploads/c816996_soupJo.jpg",
     type: "Appetizer",
   },
   {
     title: "دوغ محلی",
     ordersCount: 10,
-    price: "50,000",
-    img: "/src/assets/img/doogh.jpg",
+    price: "50000",
+    img: "doogh.jpg",
+    // img: "/src/assets/img/doogh.jpg",
+    // img:"https://imgurl.ir/uploads/j9720_doogh.jpg",
     type: "Beverages",
   },
   {
     title: "ژله بستنی",
     ordersCount: 18,
-    price: "80,000",
-    img: "/src/assets/img/zhele.jpg",
+    price: "80000",
+    img: "zhele.jpg",
+    // img: "/src/assets/img/zhele.jpg",
+    // img:"https://imgurl.ir/uploads/p75115_zhele.jpg",
     type: "dessert",
   },
 ];
